@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+
 class NextScreen extends StatelessWidget {
   const NextScreen(
-      {super.key,
+      {
+      super.key,
       required this.title,
       required this.description,
       required this.date});

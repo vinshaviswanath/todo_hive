@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:todohive/homepage.dart';
+import 'package:todohive/model/note_model.dart';
 
-void main() {
+Future<void> main() async {
+//initiate flutter
+  await Hive.initFlutter();
+
+  //open database box
+  var box = await Hive.openBox('todo');
+
+  //register adapter
+  Hive.registerAdapter(NoteModelAdapter());
   runApp(const MyApp());
 }
 

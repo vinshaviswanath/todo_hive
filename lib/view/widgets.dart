@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:todohive/view/nextscreen.dart';
 
-class _Todolist extends StatefulWidget {
-  const _Todolist({super.key,this.title='',this.description='',this.date='',required this.onPressed,});
+class Todolist extends StatefulWidget {
+  const Todolist({super.key,this.title='',this.description='',this.date='',required this.onPressed,});
 
   final String title;
   final String description;
@@ -10,10 +10,10 @@ class _Todolist extends StatefulWidget {
   final Function onPressed;
 
   @override
-  State<_Todolist> createState() => __TodolistState();
+  State<Todolist> createState() => TodolistState();
 }
 
-class __TodolistState extends State<_Todolist> {
+class TodolistState extends State<Todolist> {
   @override
   Widget build(BuildContext context) {
   dynamic width = MediaQuery.of(context).size.width;
